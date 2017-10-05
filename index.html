@@ -93,13 +93,15 @@ var str=" there you go";
   }
   if(lastUserMessage.search("navigate")!=-1) {
     botMessage = str.link("http://www.cbit.ac.in/");}
-  if(lastUserMessage.search("route")!=-1&&lastUserMessage.search("navigate")!=-1) {
-	  var i= lastUserMessage.search("from")+1;
-	  var s= lastUserMessage.substring(i);
-	  var j= lastUserMessage.search(" ");
-	  var k= lastUserMessage.substring(0,j);
-	  var m="https://www.google.co.in/maps/dir/"+ k +"//@17.3892603,78.3216218,15z/data=!4m2!4m1!3e0";
-    botMessage = str.link(m);}
+	 if(lastUserMessage.search("navigate")!=-1) {
+	var i = lastUserMessage.search("from");
+        var k = lastUserMessage.substring(i+4);
+        var z = k.search("to");
+        var r = k.substring(0,z);
+        var j = lastUserMessage.lastIndexOf(" ");
+        var s = lastUserMessage.substring(j);
+	var m= "https://www.google.co.in/maps/dir/"+ r +"/"+ s +"/@17.3892603,78.3216218,15z/data=!4m2!4m1!3e0";
+        botMessage = str.link(m);}
 }
 //****************************************************************
 
