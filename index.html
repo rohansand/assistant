@@ -82,10 +82,12 @@ function chatbotResponse() {
 var str=" there you go";
   botMessage = "I'm confused"; //the default message
 
-  if (lastUserMessage === 'hi') {
+  if (lastUserMessage === 'hi'|| 'hello' || ) {
     botMessage = 'Howdy!';
   }
-
+  if(lastUserMessage.search("sup")!=-1) {
+	  botMessage = 'im your assistant, here to help :D';
+ 
   if (lastUserMessage === 'name') {
     botMessage = 'My name is ' + botName;
   }
