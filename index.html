@@ -90,7 +90,10 @@ var str=" there you go";
     botMessage = 'My name is ' + botName;
   }
   if(lastUserMessage.search("navigate")!=-1) {
-    botMessage = str.link("http://www.cbit.ac.in/");
+    botMessage = str.link("http://www.cbit.ac.in/");}
+  if(lastUserMessage.search("route"&&"navigate")!=-1) {
+    botMessage = str.link("https://www.google.co.in/maps/dir///@17.3892603,78.3216218,15z/data=!4m2!4m1!3e0");
+	  }
   }
 }
 //****************************************************************
