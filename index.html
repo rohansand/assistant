@@ -80,9 +80,9 @@ var messages = [], //array that hold the record of each string in chat
 //edit this function to change what the chatbot says
 function chatbotResponse() { 
 var str=" there you go";
-  botMessage = "I'm confused"; //the default message
+  botMessage = "not programmed yet for that!"; //the default message
 
-  if (lastUserMessage === 'hi'|| 'hello' ) {
+  if (lastUserMessage.search('hi')!=-1) {
     botMessage = 'Howdy!';
   }
   if(lastUserMessage.search("sup")!=-1) {
