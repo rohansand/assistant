@@ -80,13 +80,13 @@ var messages = [], //array that hold the record of each string in chat
 //edit this function to change what the chatbot says
 function chatbotResponse() { 
 var str=" there you go";
-  botMessage = "not programmed yet for that!"; //the default message
+  botMessage = "not programmed \t yet for that!"; //the default message
 
   if (lastUserMessage.search('hi')!=-1) {
     botMessage = 'Howdy!';
   }
   if(lastUserMessage.search("sup")!=-1) {
-	  botMessage = 'im your assistant, here to help :D';
+	  botMessage = 'nm here to help :D';
   }
   if (lastUserMessage === 'name') {
     botMessage = 'My name is ' + botName;
