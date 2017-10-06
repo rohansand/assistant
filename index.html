@@ -82,10 +82,10 @@ function chatbotResponse() {
 var str=" there you go";
   botMessage = "not programmed \t yet for that!"; //the default message
 
-  if (lastUserMessage.search('hi')!=-1) {
+  if (lastUserMessage.toLowerCase().search('hi')!=-1) {
     botMessage = 'Howdy!';
   }
-  if(lastUserMessage.search("sup")!=-1) {
+  if(lastUserMessage.toLowerCase().search("sup")!=-1) {
 	  botMessage = 'nm here to help :D';
   }
   if (lastUserMessage === 'name') {
@@ -93,7 +93,7 @@ var str=" there you go";
   }
   if(lastUserMessage.search("homepage")!=-1) {
     botMessage = str.link("http://www.cbit.ac.in/");}
-	 if(lastUserMessage.search("navigate")!=-1) {
+	 if(lastUserMessage.toLowerCase().search("navigate")!=-1) {
 	var i = lastUserMessage.search("from");
         var k = lastUserMessage.substring(i+4);
         var z = k.search("to");
