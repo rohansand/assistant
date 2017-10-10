@@ -25,7 +25,6 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
 #bodybox {
   display: flex;
 justify-content:center;
@@ -34,15 +33,12 @@ justify-content:center;
   padding-right: 5px;
   padding-left: 5px;
 }
-
-
 h1, p {
 	font-family: sans-serif;
 	text-align: center;
 	color: #323330;
 	font-size:  100px;
 }
-
 .chatlog {
    font: 30px arial, sans-serif;
 }
@@ -57,11 +53,9 @@ h1, p {
     display: inline-block;
     font-size: 30px;
 }
-
 h1 {
   margin: auto;
 }
-
 pre {
   background-color: #f0f0f0;
   margin-right: 20px;
@@ -69,26 +63,116 @@ pre {
 </style>
 <body>
 <script>
-
 var messages = [], //array that hold the record of each string in chat
   lastUserMessage = "", //keeps track of the most recent input string from the user
   botMessage = "", //var keeps track of what the chatbot is going to say
   botName = 'Chatbot', //name of the chatbot
   talking = true; //when false the speach function doesn't work
-
 //****************************************************************
 //edit this function to change what the chatbot says
 function chatbotResponse() { 
 var str=" there you go";
   botMessage = "not programmed \t yet for that!"; //the default message
-
   if (lastUserMessage.toLowerCase().search('hi')!=-1) {
     botMessage = 'Howdy!';
   }
-  if(lastUserMessage.toLowerCase().search("sup")!=-1) {
-	  botMessage = 'nm here to help :D';
+   if (lastUserMessage.toLowerCase().search('hey')!=-1) {
+    botMessage = 'Howdy!';
+  }if (lastUserMessage.toLowerCase().search('namaste')!=-1) {
+    botMessage = 'Howdy!';
+  }if (lastUserMessage.toLowerCase().search('wassup')!=-1) {
+    botMessage = 'Howdy!';
+  }if (lastUserMessage.toLowerCase().search('how you doin')!=-1) {
+    botMessage = 'awesome as always! how about you';
   }
-  if (lastUserMessage === 'name') {
+   if (lastUserMessage.toLowerCase().search('how are you')!=-1) {
+    botMessage = 'awesome as always! how about you?';
+  }
+   if (lastUserMessage.toLowerCase().search('good')!=-1) {
+    botMessage = 'thats great!!';
+  }if (lastUserMessage.toLowerCase().search('awesome')!=-1) {
+    botMessage = 'thats great!!';
+  }if (lastUserMessage.toLowerCase().search('fine')!=-1) {
+    botMessage = 'thats great!!';
+  }if (lastUserMessage.toLowerCase().search('great')!=-1) {
+    botMessage = 'thats great!!';
+  }
+   if (lastUserMessage.toLowerCase().search('not good')!=-1) {
+    botMessage = 'awh! thats sad :(';
+  } if (lastUserMessage.toLowerCase().search('bad')!=-1) {
+    botMessage = 'awh! thats sad :(';
+  } if (lastUserMessage.toLowerCase().search('not fine')!=-1) {
+    botMessage = 'awh! thats sad :(';
+  }if (lastUserMessage.toLowerCase().search("when are my exams?")!=-1) {
+    botMessage = str.link("http://cbit.ac.in/?q=node/2158");
+  }
+   if(lastUserMessage.toLowerCase().search("campus")!=-1) {
+    botMessage = str.link("http://cbit.ac.in/?q=node/1102");
+  }
+  if(lastUserMessage.toLowerCase().search("results")!=-1) {
+    botMessage = str.link("http://cbit.ac.in/?q=node/2098");
+  }
+
+  if(lastUserMessage.toLowerCase().search("exam"&&"date"&&"examination")!=-1) {
+    botMessage = str.link("http://cbit.ac.in/?q=node/2158");
+  }   
+   if(lastUserMessage.toLowerCase().search("holidays")!=-1) {
+    botMessage = str.link("http://library.cbit.ac.in/2017-CBIT-CALENDER.pdf");
+  } 
+     if(lastUserMessage.toLowerCase().search("materials")!=-1) {
+    botMessage = str.link("http://library.cbit.ac.in/LectureNotes-2014.htm");
+  }   
+    if(lastUserMessage.toLowerCase().search("notes")!=-1) {
+    botMessage = str.link("http://library.cbit.ac.in/LectureNotes-2014.htm");
+  }   
+   if(lastUserMessage.toLowerCase().search("question"&& "papers")!=-1) {
+    botMessage = str.link("http://cbit.ac.in/?q=node/2081");
+  }
+ 
+  if (lastUserMessage.toLowerCase().search('bye')!=-1) {
+    botMessage = 'see ya!hope to see you soon';
+  }
+  if (lastUserMessage.toLowerCase().search('whats your name?')!=-1) {
+    botMessage = 'Bot.... Chat bot!';
+  }
+  if(lastUserMessage.toLowerCase().search("sup")!=-1) {
+	  botMessage = 'im here to help :D';
+  }
+  
+  if(lastUserMessage.toLowerCase().search("it"&&"syllabus")!=-1) {
+    botMessage = str.link("http://cbit.ac.in/?q=node/281");  
+	
+  }
+  if(lastUserMessage.toLowerCase().search("cse"&&"syllabus")!=-1) {
+    botMessage = str.link("http://cbit.ac.in/?q=node/259");  
+	
+  }
+ 
+  if(lastUserMessage.toLowerCase().search("html")!=-1) {
+    botMessage = str.link("https://www.w3schools.com/html/");  
+	
+ }
+  if(lastUserMessage.toLowerCase().search("javascript")!=-1) {
+    botMessage = str.link("https://www.w3schools.com/js/default.asp");  
+	
+ }
+  if(lastUserMessage.toLowerCase().search("css")!=-1) {
+    botMessage = str.link("https://www.w3schools.com/css/default.asp");  
+	
+ }
+  if(lastUserMessage.toLowerCase().search("css")!=-1) {
+    botMessage = str.link("https://www.w3schools.com/css/default.asp");  
+	
+ }
+ if(lastUserMessage.toLowerCase().search("attendance")!=-1) {
+    botMessage = str.link("http://erp.cbit.org.in/");  
+	
+ }
+ if(lastUserMessage.toLowerCase().search("attendance")!=-1) {
+    botMessage = str.link("http://erp.cbit.org.in/");  
+	
+ }
+ if (lastUserMessage === 'name') {
     botMessage = 'My name is ' + botName;
   }
   if(lastUserMessage.search("homepage")!=-1) {
@@ -102,9 +186,11 @@ var str=" there you go";
         var s = lastUserMessage.substring(j);
 	var m= "https://www.google.co.in/maps/dir/"+ r +"/"+ s +"/@17.3892603,78.3216218,15z/data=!4m2!4m1!3e0";
         botMessage = str.link(m);}
+  
 }
-//****************************************************************
 
+
+//****************************************************************
 //this runs each time enter is pressed.
 //It controls the overall input and output
 function newEntry() {
@@ -123,7 +209,6 @@ function newEntry() {
     }
   }
 }
-
 //runs the keypress() function when a key is pressed
 document.onkeypress = keyPress;
 //if the key pressed is 'enter' runs the function newEntry()
@@ -139,7 +224,6 @@ function keyPress(e) {
       //document.getElementById("chatbox").value = lastUserMessage;
   }
 }
-
 //clears the placeholder text ion the chatbox
 //this function is set to run when the users brings focus to the chatbox, by clicking on it
 function placeHolder() {
