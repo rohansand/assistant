@@ -139,14 +139,6 @@ var str=" there you go";
 	  botMessage = 'im here to help :D';
   }
   
-  if(lastUserMessage.toLowerCase().search("it"&&"syllabus")!=-1) {
-    botMessage = str.link("http://cbit.ac.in/?q=node/281");  
-	
-  }
-  if(lastUserMessage.toLowerCase().search("cse"&&"syllabus")!=-1) {
-    botMessage = str.link("http://cbit.ac.in/?q=node/259");  
-	
-  }
  
   if(lastUserMessage.toLowerCase().search("html")!=-1) {
     botMessage = str.link("https://www.w3schools.com/html/");  
@@ -156,6 +148,15 @@ var str=" there you go";
     botMessage = str.link("https://www.w3schools.com/js/default.asp");  
 	
  }
+	if (lastUserMessage.toLowerCase().search('syllabus')!=-1) {
+    botMessage = 'which branch ?';
+}
+     if((lastUserMessage.toLowerCase().search("cse syllabus")!=-1)){
+      botMessage = str.link("http://cbit.ac.in/?q=node/259");
+     }
+    if(lastUserMessage.toLowerCase().search("it syllabus")!=-1){
+      botMessage = str.link("http://cbit.ac.in/?q=node/281");
+     }
   if(lastUserMessage.toLowerCase().search("css")!=-1) {
     botMessage = str.link("https://www.w3schools.com/css/default.asp");  
 	
