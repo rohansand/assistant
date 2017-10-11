@@ -107,8 +107,19 @@ var str=" there you go";
    if(lastUserMessage.toLowerCase().search("campus")!=-1) {
     botMessage = str.link("http://cbit.ac.in/?q=node/1102");
   }
+     if(lastUserMessage.toLowerCase().search("fact")!=-1) {
+    botMessage = str.link("http://www.unkno.com/");
+  }
+	
 	if(lastUserMessage.toLowerCase().search("joke")!=-1){
       botMessage = str.link("http://www.dadjokegenerator.com/");
+     }
+	
+	if(lastUserMessage.toLowerCase().search("movie")!=-1){
+      botMessage = str.link("http://pickamovieforme.com/");
+     }
+	if(lastUserMessage.toLowerCase().search("book data structures")!=-1){
+      botMessage = str.link("http://javarevisited.blogspot.in/2015/07/5-data-structure-and-algorithm-books-best-must-read.html");
      }
   if(lastUserMessage.toLowerCase().search("results")!=-1) {
     botMessage = str.link("http://cbit.ac.in/?q=node/2098");
