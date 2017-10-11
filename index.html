@@ -186,6 +186,8 @@ var str=" there you go";
  if (lastUserMessage === 'name') {
     botMessage = 'My name is ' + botName;
   }
+	 if(lastUserMessage.search("cbit")!=-1) {
+    botMessage = str.link("http://www.cbit.ac.in/");}
   if(lastUserMessage.search("homepage")!=-1) {
     botMessage = str.link("http://www.cbit.ac.in/");}
 	 if(lastUserMessage.toLowerCase().search("navigate")!=-1) {
