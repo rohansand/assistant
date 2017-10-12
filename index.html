@@ -111,7 +111,9 @@ var str=" there you go";
      if(lastUserMessage.toLowerCase().search("fact")!=-1) {
     botMessage = str.link("http://www.unkno.com/");
   }
-	
+	 if(lastUserMessage.toLowerCase().search("teach")!=-1) {
+    botMessage = str.link("https://onlinecourses.nptel.ac.in/explorer");
+  }
 	if(lastUserMessage.toLowerCase().search("joke")!=-1){
       botMessage = str.link("http://www.dadjokegenerator.com/");
      }
